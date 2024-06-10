@@ -39,14 +39,3 @@ declare module 'winax' {
   // Utility function to release COM objects
   export function release(...objects: any[]): void;
 }
-
-declare global {
-  function ActiveXObject(id: string, options?: ActiveXObjectOptions): any;
-  function ActiveXObject(obj: Record<string, any>): any;
-
-  interface ActiveXObjectOptions {
-    activate?: boolean;
-    getobject?: boolean;
-    type?: boolean;
-  }
-}
